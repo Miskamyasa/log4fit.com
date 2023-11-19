@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* colors */
+    --color-primary: #1a5e7e;
+
+    /* text */
+    --color-dark: #565656;
+    --color-dimmed: #757575;
+    --color-white: #FFFFFF;
+    /* utils */
+    --color-outline: #E0E0E0;
+
+    --shadow: 0.2rem 0.2rem 2.2rem #333;
+}
+
+html {
+    font-size: 12px;
+    font-family: RubikVariable, sans-serif;
+    background-color: #eee;
+}
+
+/* md */
+@media (min-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    color: #020202;
+}
+
+h1,
+h2 {
+    color: #020202;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: normal;
+}
+
+p {
+    color: #464646;
+    font-size: 1rem;
+    line-height: 161%;
+    text-align: justify;
+    margin: 1.61rem 0;
+}
+
+footer p,
+header p {
+    color: inherit;
+}
+
+a {
+    transition: 250ms color, 250ms background-color;
+}
+
+a,
+input,
+button {
+    outline: none;
+    outline-offset: 2px;
+}
+
+a:focus-visible,
+input:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--color-outline);
+}
+
+.container {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin: 0 auto;
+    max-width: 620px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.link {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.button {
+    background-color: var(--color-primary);
+    border: none;
+    color: white;
+    padding: 0.6rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 3rem 0 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0.2rem 0.2rem 2.2rem #333;
+}

@@ -1,0 +1,19 @@
+---
+import type {ParentProps} from "solid-js"
+import type {AvailableEvents} from "../../features/events"
+import {ClientButton} from "./ClientButton"
+
+export interface Props extends ParentProps {
+    eventName?: AvailableEvents
+    eventParams?: Record<string, unknown>
+}
+
+const {eventName, eventParams} = Astro.props
+---
+
+<ClientButton
+    client:visible
+    eventName={eventName}
+    eventParams={eventParams}>
+    <slot />
+</ClientButton>

@@ -1,3 +1,21 @@
 {
-  "extends": "astro/tsconfigs/strict"
+    "extends": "astro/tsconfigs/strict",
+    "compilerOptions": {
+        "jsx": "preserve",
+        "jsxImportSource": "solid-js",
+        "plugins": [{
+            "name": "@astrojs/ts-plugin"
+        }],
+        "types": [
+            "astro/client"
+        ]
+    },
+    "include": [
+        ".eslintrc.cjs",
+        "tailwind.config.cjs",
+        "astro.config.mjs",
+        "src/**/*.tsx",
+        "src/**/*.ts",
+        "src/**/*.astro"
+    ]
 }

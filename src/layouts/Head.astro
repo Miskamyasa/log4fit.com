@@ -1,0 +1,71 @@
+---
+import Favicon from "../components/favicon/Favicon.astro"
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+
+let title = "Log4Fit.com"
+let description
+    = "The website showcases the features and benefits of Log4Fit, a React Native app designed to track gym sessions"
+
+const image = "/static-logo.png"
+
+const {status = 200} = Astro.response
+---
+
+<!-- Global Metadata -->
+<Favicon />
+<meta charset="utf-8" />
+<meta
+    content="width=device-width,initial-scale=1"
+    name="viewport" />
+<meta
+    content={Astro.generator}
+    name="generator" />
+
+<!-- Canonical URL -->
+{status < 400 ? <link
+    href={canonicalURL}
+    rel="canonical" /> : null}
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta
+    content={title}
+    name="title" />
+<meta
+    content={description}
+    name="description" />
+
+<!-- Open Graph / Facebook -->
+<meta
+    content="website"
+    property="og:type" />
+<meta
+    content={Astro.url}
+    property="og:url" />
+<meta
+    content={title}
+    property="og:title" />
+<meta
+    content={description}
+    property="og:description" />
+<meta
+    content={new URL(image, Astro.url)}
+    property="og:image" />
+
+<!-- Twitter -->
+<meta
+    content="summary_large_image"
+    property="twitter:card" />
+<meta
+    content={Astro.url}
+    property="twitter:url" />
+<meta
+    content={title}
+    property="twitter:title" />
+<meta
+    content={description}
+    property="twitter:description" />
+<meta
+    content={new URL(image, Astro.url)}
+    property="twitter:image" />

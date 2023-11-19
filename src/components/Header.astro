@@ -1,0 +1,75 @@
+---
+import {Image} from "astro:assets"
+import banner from "../assets/banner.jpg"
+import logo from "../assets/logo.png"
+import Badges from "./Badges.astro"
+import Button from "./buttons/Button.astro"
+
+---
+<header class="header">
+    <Image
+        alt="Barbell on the floor"
+        class="banner-image"
+        height={800}
+        src={banner}
+        width={1920}
+    />
+    <div class="container header-text">
+        <div class="row">
+            <Image
+                alt="Log4Fit"
+                class="logo"
+                height={128}
+                src={logo}
+                width={128}
+            />
+            <h1>Log4Fit</h1>
+        </div>
+        <div class="row mb-8">
+            <Button
+                eventName="contact">
+                Contact us
+            </Button>
+        </div>
+        <Badges />
+    </div>
+</header>
+
+
+<style>
+    .header {
+        position: relative;
+        height: 680px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-text {
+        margin-top: 20%;
+        margin-bottom: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .header-text h1 {
+        font-size: 4rem;
+        color: white;
+        text-shadow: var(--shadow)
+    }
+    .banner-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: -1;
+    }
+    .logo {
+        margin-right: 1.21rem;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        max-width: 4rem;
+        max-height: 4rem;
+        box-shadow: var(--shadow)
+    }
+</style>

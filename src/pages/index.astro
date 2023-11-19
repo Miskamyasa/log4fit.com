@@ -1,9 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import ContactForm from "../components/ContactForm.astro"
+import Download from "../components/Download.astro"
+import Header from "../components/Header.astro"
+import LandingText from "../components/LandingText.astro"
+import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout>
-	<main>
-		<h1>Log4Fit.com</h1>
-	</main>
+    <Header />
+    <main class="pt-8">
+        <LandingText />
+        <Download />
+        <ContactForm />
+    </main>
 </Layout>

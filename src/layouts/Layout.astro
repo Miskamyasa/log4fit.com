@@ -1,20 +1,21 @@
 ---
+import "@fontsource/rubik/variable.css"
+import "./global.css"
+
+import Head from "./Head.astro"
 
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Site description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Log4Fit.com</title>
-	</head>
-
-	<body>
-		<slot />
-	</body>
-
+    <Head />
+    <body>
+        <script
+            async
+            data-ackee-domain-id="d8cd7df1-08db-40c8-9904-38cc7198471f"
+            data-ackee-server="https://ackee.paragraph.red"
+            src="https://ackee.paragraph.red/somethinguseful.js"
+        ></script>
+        <slot />
+    </body>
 </html>

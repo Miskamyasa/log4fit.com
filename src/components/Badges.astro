@@ -1,0 +1,29 @@
+---
+import {Image} from "astro:assets"
+import appStore from "../assets/app-store-badge.png"
+import googlePlay from "../assets/google-play-badge.png"
+
+---
+<ul class="grid gap-2 grid-cols-2">
+    <li>
+        <a
+            href="https://play.google.com/store/apps/details?id=red.paragraph.log4fit"
+            target="_blank"
+        >
+            <Image
+                alt="google play badge"
+                height={120}
+                src={googlePlay} />
+        </a>
+    </li>
+    <li>
+        <a
+            href="#"
+            target="_blank">
+            <Image
+                alt="app store badge"
+                height={120}
+                src={appStore} />
+        </a>
+    </li>
+</ul>
