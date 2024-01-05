@@ -12,7 +12,5 @@ module.exports = {
             sans: ["RubikVariable", "Rubik", ...defaultTheme.fontFamily.sans],
         },
     },
-    plugins: [
-        require("@kobalte/tailwindcss"),
-    ],
+    plugins: [],
 }

@@ -3,7 +3,6 @@ import {Image} from "astro:assets"
 import banner from "../assets/banner.jpg"
 import logo from "../assets/logo.png"
 import Badges from "./Badges.astro"
-import Button from "./buttons/Button.astro"
 
 ---
 <header class="header">
@@ -25,13 +24,9 @@ import Button from "./buttons/Button.astro"
             />
             <h1>Log4Fit</h1>
         </div>
-        <div class="row mb-8">
-            <Button
-                eventName="contact">
-                Contact us
-            </Button>
+        <div class="row mt-8">
+            <Badges />
         </div>
-        <Badges />
     </div>
 </header>
 

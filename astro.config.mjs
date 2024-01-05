@@ -1,5 +1,4 @@
 import sitemap from "@astrojs/sitemap"
-import solid from "@astrojs/solid-js"
 import tailwind from "@astrojs/tailwind"
 import {defineConfig} from "astro/config"
 import {loadEnv} from "vite"
@@ -13,7 +12,6 @@ export default defineConfig({
     site: SITE_URL,
     trailingSlash: "never",
     integrations: [
-        solid(),
         tailwind(),
         sitemap(),
     ],
