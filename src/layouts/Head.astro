@@ -5,7 +5,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
 let title = "Log4Fit.com"
 let description
-    = "The website showcases the features and benefits of Log4Fit, a React Native app designed to track gym sessions"
+    = "The website showcases the features and benefits of Log4Fit, a Mobile app designed to track gym sessions"
 
 const image = "/static-logo.png"
 
@@ -26,15 +26,6 @@ const {status = 200} = Astro.response
 {status < 400 ? <link
     href={canonicalURL}
     rel="canonical" /> : null}
-
-<!-- Primary Meta Tags -->
-<title>{title}</title>
-<meta
-    content={title}
-    name="title" />
-<meta
-    content={description}
-    name="description" />
 
 <!-- Open Graph / Facebook -->
 <meta
@@ -69,3 +60,12 @@ const {status = 200} = Astro.response
 <meta
     content={new URL(image, Astro.url)}
     property="twitter:image" />
+
+<!-- Primary Meta Tags -->
+<meta
+    content={title}
+    name="title" />
+<meta
+    content={description}
+    name="description" />
+<title>{title}</title>

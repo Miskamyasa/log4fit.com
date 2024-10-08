@@ -1,15 +1,16 @@
 ---
-import {Image} from "astro:assets"
-import banner from "../assets/banner.jpg"
-import logo from "../assets/logo.png"
-import Badges from "./Badges.astro"
-
+import { Image } from "astro:assets";
+import banner from "../assets/banner.jpg";
+import logo from "../assets/logo.png";
+import Badges from "./Badges.astro";
 ---
+
 <header class="header">
     <Image
         alt="Barbell on the floor"
         class="banner-image"
         height={800}
+        loading="eager"
         src={banner}
         width={1920}
     />
@@ -22,14 +23,13 @@ import Badges from "./Badges.astro"
                 src={logo}
                 width={128}
             />
-            <h1>Log4Fit</h1>
+            <p class="brand-name">Log4Fit</p>
         </div>
         <div class="row mt-8">
             <Badges />
         </div>
     </div>
 </header>
-
 
 <style>
     .header {
@@ -47,10 +47,11 @@ import Badges from "./Badges.astro"
         align-items: center;
         justify-content: center;
     }
-    .header-text h1 {
+    .brand-name {
         font-size: 4rem;
+        font-weight: 600;
         color: white;
-        text-shadow: var(--shadow)
+        text-shadow: var(--shadow);
     }
     .banner-image {
         width: 100%;
@@ -65,6 +66,6 @@ import Badges from "./Badges.astro"
         overflow: hidden;
         max-width: 4rem;
         max-height: 4rem;
-        box-shadow: var(--shadow)
+        box-shadow: var(--shadow);
     }
 </style>
